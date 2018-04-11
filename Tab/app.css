@@ -1,0 +1,29 @@
+ul,li{
+    margin: 0;
+    padding: 0;
+    list-style: none;
+}
+li{
+    float: left;
+    background-color: darkslategray;
+    color: white;
+    padding:10px;
+    margin-right:3px;
+}
+.show-li{
+    border: 1px darkslategray solid;
+}
+.show-box{
+    clear: left;
+}
+.box{
+
+    width: 300px;
+    height: 150px;
+    background-color: lightslategrey;
+    color:white;
+    display:none;
+}
+.show-box{
+    display: block;
+}

@@ -1,0 +1,65 @@
+<!doctype html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport"
+          content="width=device-width, user-scalable=no, initial-scale=1.0, maximum-scale=1.0, minimum-scale=1.0">
+    <meta http-equiv="X-UA-Compatible" content="ie=edge">
+    <title>ghost button</title>
+    <link rel="stylesheet" href="app.css">
+    <script src="jquery-2.1.1.min.js"></script>
+</head>
+<body>
+<div class="box">
+    <div class="icon_box box-miss">
+        <span class="icon"></span>
+        <a href="#" class="btn" data-title="My mission is clear">
+            <span class="line line-top"></span>
+            <span class="line line-left"></span>
+            <span class="line line-right"></span>
+            <span class="line line-bottom"></span>
+            MISSION
+        </a>
+    </div>
+    <div class="icon_box box-play">
+        <span class="icon"></span>
+        <a href="#" class="btn" data-title="This is my playground">
+            <span class="line line-top"></span>
+            <span class="line line-left"></span>
+            <span class="line line-right"></span>
+            <span class="line line-bottom"></span>
+            PLAY
+        </a>
+    </div>
+    <div class="icon_box box-touch">
+        <span class="icon"></span>
+        <a href="#" class="btn" data-title="Let's do something together">
+            <span class="line line-top"></span>
+            <span class="line line-left"></span>
+            <span class="line line-right"></span>
+            <span class="line line-bottom"></span>
+            TOUCH
+        </a>
+    </div>
+    <div class="tip">
+        <em></em>
+        <span></span>
+    </div>
+</div>
+<script>
+    $(function(){
+        $(".btn").hover(function () {
+            var cont=$(this).attr("data-title");
+            $(".tip em").text(cont);
+            var wid=$(this).offset().left;
+            var rel=($(".tip").outerWidth()-$(this).outerWidth())/2;
+            var f=wid-rel;
+            $(".tip").css({"left":f+"px"}).animate({"top":175,"opacity":1},200);
+        },function () {
+            $(".tip").animate({"top":160,"opacity":0},200);
+        })
+    })
+</script>
+
+</body>
+</html>
